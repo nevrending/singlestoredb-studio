@@ -1,11 +1,16 @@
 FROM ubuntu:18.04
 
-ARG VERSION="memsql-studio_1.9.7_ffc2a3c243_amd64.deb"
+LABEL maintainer="Yefta Sutanto <hello@yefta.com>"
 
-RUN apt update && apt upgrade -y && apt install -y wget && \
-    wget https://release.memsql.com/production/debian/pool/$VERSION && \
-    dpkg -i $VERSION && \
-    rm $VERSION
+ENV MEMSQL_STUDIO_VERSION=1.9.7
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y apt-transport-https ca-certificates gnupg wget --no-install-recommends && \
+    wget -q -O - 'https://release.memsql.com/release-aug2018.gpg' | apt-key add - && \
+    echo "deb https://release.memsql.com/production/debian memsql main" | tee /etc/apt/sources.list.d/memsql.list && \
+    apt-get update && \
+    apt-get install -y memsql-studio=$MEMSQL_STUDIO_VERSION --no-install-recommends && \
+    rm -rf /var/lib/apt/lists/* && \
+    touch studio.hcl
 
 EXPOSE 8080/tcp
 
