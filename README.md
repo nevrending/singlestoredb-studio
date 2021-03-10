@@ -4,11 +4,11 @@
 
 # MemSQL Studio
 
-Container image with [MemSQL Studio](https://docs.memsql.com/v7.1/tools/memsql-studio/memsql-studio-overview/).
+Container image with [MemSQL Studio](https://docs.singlestore.com/v7.3/tools/memsql-studio/memsql-studio-overview/).
 
 ### Running
 
-    $ docker run --name memsql-studio -p 8080:8080/tcp -d nevrending/memsql-studio:latest
+    $ docker run --name memsql-studio -p 8080:8080/tcp -d nevrending/memsql-studio:3.2.4
 
 ### Usage
 
@@ -20,4 +20,4 @@ To access the UI in a browser, go to:
 
 Mount a storage volume to `/var/lib/memsql-studio`.
 
-    $ docker run --name memsql-studio -v memsql-studio:/var/lib/memsql-studio -p 8080:8080/tcp -d nevrending/memsql-studio:latest
+    $ docker run --name memsql-studio -v memsql-studio:/var/lib/memsql-studio -p 8080:8080/tcp -d nevrending/memsql-studio:3.2.4
