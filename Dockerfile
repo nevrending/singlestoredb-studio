@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 LABEL maintainer="Yefta Sutanto <hello@yefta.com>"
 
-ENV MEMSQL_STUDIO_VERSION=3.2.4
+ENV MEMSQL_STUDIO_VERSION=3.2.11
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y apt-transport-https ca-certificates gnupg wget --no-install-recommends && \
     wget -q -O - 'https://release.memsql.com/release-aug2018.gpg' | apt-key add - && \
