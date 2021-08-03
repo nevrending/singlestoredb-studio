@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 
 LABEL maintainer="Yefta Sutanto <hello@yefta.com>"
+LABEL org.opencontainers.image.source https://github.com/nevrending/memsql-studio
 
 ENV MEMSQL_STUDIO_VERSION=3.2.11
 
