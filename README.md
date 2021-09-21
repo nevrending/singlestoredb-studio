@@ -3,13 +3,19 @@
 ![Docker Pulls](https://img.shields.io/docker/pulls/nevrending/memsql-studio?style=flat-square)
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/nevrending/memsql-studio?style=flat-square&sort=date)
 
-# MemSQL Studio
+# SingleStore DB Studio
 
-Container image with [MemSQL Studio](https://docs.singlestore.com/v7.3/tools/memsql-studio/memsql-studio-overview/).
+Container image with [SingleStore DB Studio](https://docs.singlestore.com/v7.3/tools/memsql-studio/memsql-studio-overview/).
+
+![Screen Shot 2021-09-21 at 19 51 28](https://user-images.githubusercontent.com/4745298/134150518-cf941f01-6c3d-4a5e-8bb7-7a8326c987d5.png)
 
 ### Running
 
-    $ docker run --name memsql-studio -p 8080:8080/tcp -d nevrending/memsql-studio:latest
+    $ docker run --name singlestoredb-studio -p 8080:8080/tcp -d nevrending/memsql-studio:latest
+
+or
+
+    $ docker run --name singlestoredb-studio -p 8080:8080/tcp -d ghcr.io/nevrending/singlestoredb-studio:latest
 
 ### Usage
 
@@ -19,9 +25,13 @@ To access the UI in a browser, go to:
 
 ### Persisting Config Between Sessions
 
-Mount a storage volume to `/var/lib/memsql-studio`.
+Mount a storage volume to `/var/lib/singlestoredb-studio`.
 
-    $ docker run --name memsql-studio -v memsql-studio:/var/lib/memsql-studio -p 8080:8080/tcp -d nevrending/memsql-studio:latest
+    $ docker run --name singlestoredb-studio -v singlestoredb-studio:/var/lib/singlestoredb-studio -p 8080:8080/tcp -d nevrending/memsql-studio:latest
+
+or
+
+    $ docker run --name singlestoredb-studio -v singlestoredb-studio:/var/lib/singlestoredb-studio -p 8080:8080/tcp -d ghcr.io/nevrending/singlestoredb-studio:latest
 
 ## License
 
