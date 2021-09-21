@@ -5,7 +5,7 @@
 
 # SingleStore DB Studio
 
-Container image with [SingleStore DB Studio](https://docs.singlestore.com/v7.3/tools/memsql-studio/memsql-studio-overview/).
+Container image with [SingleStore DB Studio](https://docs.singlestore.com/db/v7.5/en/user-and-cluster-administration/cluster-management-with-tools/singlestore-db-studio-overview.html).
 
 ![Screen Shot 2021-09-21 at 19 51 28](https://user-images.githubusercontent.com/4745298/134150518-cf941f01-6c3d-4a5e-8bb7-7a8326c987d5.png)
 

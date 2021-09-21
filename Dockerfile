@@ -10,8 +10,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y apt-transport-htt
     echo "deb [arch=amd64] https://release.memsql.com/production/debian memsql main" | tee /etc/apt/sources.list.d/memsql.list && \
     apt-get update && \
     apt-get install -y singlestoredb-studio=$SINGLESTOREDB_STUDIO_VERSION --no-install-recommends && \
-    rm -rf /var/lib/apt/lists/* && \
-    touch studio.hcl
+    rm -rf /var/lib/apt/lists/*
 
 EXPOSE 8080/tcp
 
