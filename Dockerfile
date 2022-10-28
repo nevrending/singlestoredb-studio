@@ -1,9 +1,9 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 LABEL maintainer="Yefta Sutanto <hello@yefta.com>"
 LABEL org.opencontainers.image.source https://github.com/nevrending/singlestoredb-studio
 
-ENV SINGLESTOREDB_STUDIO_VERSION=3.2.11
+ENV SINGLESTOREDB_STUDIO_VERSION=4.0.8
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y apt-transport-https ca-certificates gnupg wget --no-install-recommends && \
     wget -q -O - 'https://release.memsql.com/release-aug2018.gpg' 2>/dev/null | apt-key add - && \
