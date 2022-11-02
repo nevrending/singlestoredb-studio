@@ -1,4 +1,3 @@
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/nevrending/singlestoredb-studio?style=flat-square)
 ![Docker Version](https://img.shields.io/docker/v/nevrending/singlestoredb-studio?style=flat-square&sort=semver)
 ![Docker Pulls](https://img.shields.io/docker/pulls/nevrending/singlestoredb-studio?style=flat-square)
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/nevrending/singlestoredb-studio?style=flat-square&sort=date)
